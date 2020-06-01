@@ -853,7 +853,7 @@ SPサイズ メディアクエリ
 
 /*IE11用object-fit-images---------------------------*/
 
-.obj-fit-img {
+.card_image{
 	object-fit: cover;
 	object-position: 0 100%;
 	font-family: 'object-fit: cover; object-position: 0 100%;'
