@@ -856,13 +856,13 @@ SPサイズ メディアクエリ
 .card_image{
 	object-fit: cover;
 	object-position: 50% 50%;
-	font-family: 'object-fit: cover; object-position: 0 100%;'
+	font-family: 'object-fit: cover; object-position: 50% 50%;'
 }
 @media screen and (max-width:768px) {
 
 	.card_image{
 		object-fit: fill;
 		object-position: 50% 50%;
-		font-family: 'object-fit: cover; object-position: 0 100%;'
+		font-family: 'object-fit: cover; object-position: 50% 50%;'
 	}
 	}
