@@ -878,4 +878,13 @@ IE対応*
 		color: inherit;
 		font-weight: bold;
 	}
+	.language a {
+		color: #777;
+		font-weight: normal;
+	}
+
+	.language a:hover {
+		border-bottom: 1px solid #777;
+	}
+
 }
