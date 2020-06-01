@@ -195,7 +195,7 @@ PCサイズ
 .heroarea {
 	width: 100vw;
 	height: 50rem;
-	margin-top: 10rem;
+	margin-top: 9.9rem;
 	position: relative;
 }
 
@@ -743,7 +743,7 @@ SPサイズ メディアクエリ
 
 	.card_image {
 		width: 100%;
-		height: auto;
+		height:57vw;
 		object-fit: cover;
 		margin-bottom: 2.8rem;
 	}
@@ -845,4 +845,18 @@ SPサイズ メディアクエリ
 		margin-bottom: 0.6rem;
 	}
 
+}
+
+/*IE11用object-fit-images---------------------------*/
+
+.card_image{
+	object-fit: cover;
+	font-family: 'object-fit: cover;'
+}
+@media screen and (max-width:768px) {
+
+	.card_image{
+		object-fit: cover;
+		font-family: 'object-fit: cover;'
+	}
 }

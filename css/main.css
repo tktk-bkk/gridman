@@ -746,7 +746,7 @@ SPサイズ メディアクエリ
 
 	.card_image {
 		width: 100%;
-		height:inherit;
+		height:57vw;
 		object-fit: cover;
 		margin-bottom: 2.8rem;
 	}
