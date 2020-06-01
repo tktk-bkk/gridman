@@ -3,14 +3,6 @@ html {
 	font-family: 'Roboto', sans-serif;
 }
 
-/*アラビア語対応*/
-.concept_text,
-.card,
-.language_container,
-.contact_button_container {
-	direction: rtl;
-	text-align:
-}
 
 #headder,.nav_container {
 	flex-flow: row-reverse;
@@ -358,7 +350,8 @@ PCサイズ
 	font-weight: 700;
 	font-size: 2.3rem;
 	color: #D09F51;
-	margin-left: 1rem;
+/*	margin-left: 1rem;*/
+	margin-right: 1rem;
 	position: relative;
 	top: -1px;
 }
@@ -619,6 +612,7 @@ SPサイズ メディアクエリ
 	/*ドロワーの中身---------------------------*/
 	.nav_item a::after {
 		margin-bottom: -6px;
+		display: none;
 	}
 
 	.nav_container {
@@ -779,7 +773,8 @@ SPサイズ メディアクエリ
 	.card_number_decoration {
 		font-size: 2rem;
 		color: #D09F51;
-		margin-left: .8rem;
+/*		margin-left: .8rem;*/
+		margin-right: .8rem;
 		position: relative;
 		top: -1px;
 	}
@@ -862,4 +857,17 @@ SPサイズ メディアクエリ
 		margin-bottom: 0.6rem;
 	}
 
+}
+
+
+/*----------------------------------------------------------------------------------*
+アラビア語対応*
+*----------------------------------------------------------------------------------*/
+
+.concept_text,
+.card,
+.language_container,
+.contact_button_container {
+	direction: rtl;
+	text-align: right;
 }

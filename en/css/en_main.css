@@ -603,6 +603,7 @@ SPサイズ メディアクエリ
 	/*ドロワーの中身---------------------------*/
 	.nav_item a::after {
 		margin-bottom: -6px;
+		display: none;
 	}
 
 	.nav_container {

@@ -285,7 +285,7 @@ PCサイズ
 
 .concept_text {
 	width: calc(100% - 6rem);
-	max-width: 100rem;
+/*	max-width: 100rem;*/
 	font-size: 2.1rem;
 	letter-spacing: 0.02em;
 	line-height: 2;
@@ -602,7 +602,8 @@ SPサイズ メディアクエリ
 
 	/*ドロワーの中身---------------------------*/
 	.nav_item a::after {
-	  margin-bottom: -6px;
+		margin-bottom: -6px;
+		display: none;
 	}
 
 	.nav_container {
