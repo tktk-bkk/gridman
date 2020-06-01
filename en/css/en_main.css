@@ -24,7 +24,7 @@ PCサイズ
 #headder {
 	background-color: #fff;
 	width: 100%;
-	height: 9.9rem;
+	height: 10rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -41,7 +41,7 @@ PCサイズ
 
 .logo_container {
 	padding: 0 4.2vw;
-/*		max-width: 27.4rem;*/
+	/*max-width: 27.4rem;*/
 	min-width: 18.2rem;
 	height: 100%;
 	display: flex;
@@ -683,7 +683,7 @@ SPサイズ メディアクエリ
 
 	.heroarea {
 		height: 44rem;
-		margin-top: 6.6rem;
+		margin-top: 6.5rem;
 	}
 
 	.heroarea_text {
@@ -847,7 +847,12 @@ SPサイズ メディアクエリ
 
 }
 
-/*IE11用object-fit-images---------------------------*/
+
+/*----------------------------------------------------------------------------------*
+IE対応*
+*----------------------------------------------------------------------------------*/
+
+/*object-fit-images---------------------------*/
 
 .card_image{
 	object-fit: cover;
@@ -858,5 +863,15 @@ SPサイズ メディアクエリ
 	.card_image{
 		object-fit: cover;
 		font-family: 'object-fit: cover;'
+	}
+}
+
+/*ブレンドモードの代替---------------------------*/
+
+@media all and (-ms-high-contrast: none) {
+
+	.language {
+		color: inherit;
+		font-weight: bold;
 	}
 }
