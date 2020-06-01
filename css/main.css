@@ -198,7 +198,7 @@ PCサイズ
 .heroarea {
 	width: 100vw;
 	height: 50rem;
-	margin-top: 10rem;
+	margin-top: 9.9rem;
 	position: relative;
 }
 
@@ -324,6 +324,8 @@ PCサイズ
 	width: 50%;
 	height: 48rem;
 	object-fit: cover;
+	/* IE対策 */
+	font-family: 'object-fit: cover;';
 }
 
 .card_description {
@@ -746,8 +748,11 @@ SPサイズ メディアクエリ
 
 	.card_image {
 		width: 100%;
+		max-width: 50rem;
 		height: auto;
-		object-fit: cover;
+		object-fit: fill;
+		/* IE対策 */
+		font-family: 'object-fit: fill;';
 		margin-bottom: 2.8rem;
 	}
 
@@ -849,20 +854,3 @@ SPサイズ メディアクエリ
 	}
 
 }
-
-
-/*IE11用object-fit-images---------------------------*/
-
-.card_image{
-	object-fit: cover;
-	object-position: 50% 50%;
-	font-family: 'object-fit: cover; object-position: 50% 50%;'
-}
-@media screen and (max-width:768px) {
-
-	.card_image{
-		object-fit: fill;
-		object-position: 50% 50%;
-		font-family: 'object-fit: fill; object-position: 50% 50%;'
-	}
-	}
