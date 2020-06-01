@@ -849,3 +849,12 @@ SPサイズ メディアクエリ
 	}
 
 }
+
+
+/*IE11用object-fit-images---------------------------*/
+
+.obj-fit-img {
+	object-fit: cover;
+	object-position: 0 100%;
+	font-family: 'object-fit: cover; object-position: 0 100%;'
+}
