@@ -223,7 +223,6 @@ PCサイズ
 	left: 0;
 }
 
-
 .heroarea_text {
 	width: 100%;
 	text-align: center;
@@ -676,7 +675,8 @@ SPサイズ メディアクエリ
 
 	.language {
 		position: absolute;
-		bottom: auto;
+		bottom: 50%;
+		transform: translateY(50%);
 		left: auto;
 		right: 8.5rem;
 	}
