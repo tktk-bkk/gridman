@@ -1,0 +1,848 @@
+html {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.char{
+	display: inline-block;
+}
+
+#cover{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 10000;
+	background-color: #FFF;
+}
+
+/*----------------------------------------------------------------------------------*
+PCサイズ
+*----------------------------------------------------------------------------------*/
+
+/*ヘッダー---------------------------*/
+
+#headder {
+	background-color: #fff;
+	width: 100%;
+	height: 9.9rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	border-bottom: 1px #EEE solid;
+}
+
+#headder a {
+	text-decoration: none;
+}
+
+.logo_container {
+	padding: 0 4.2vw;
+/*		max-width: 27.4rem;*/
+	min-width: 18.2rem;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	display: #1A1A1A;
+	width: 12vw;
+	min-width: 12.2rem;
+	max-width: 15.4rem;
+	vertical-align: middle;
+}
+
+.menu_pc {
+	height: inherit;
+}
+
+.nav_container {
+	height: inherit;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav {
+	height: 100%;
+	width: 40vw;
+	max-width: 35rem;
+	font-size: 1.4rem;
+	letter-spacing: 0.09em;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.nav_item {
+	height: 100%;
+	list-style: none;
+	position: relative;
+}
+
+.nav_item a {
+	color: black;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+.nav_item::after {
+	content: '';
+	display: block;
+	background: #D09F51;
+	height: 3px;
+	width: 100%;
+	margin: 1.6rem auto 0;
+	position: absolute;
+	bottom: -1px;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: transform .3s;
+}
+
+.nav_item:hover::after {
+	transform-origin: left top;
+	transform: scale(1, 1);
+}
+.nav_item a::after {
+	content: '';
+	display: block;
+	background: #D09F51;
+	height: 3px;
+	width: 100%;
+	margin: 1.6rem auto 0;
+	position: absolute;
+	bottom: -1px;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: transform .3s;
+}
+.nav_item a.active::after {
+	transform: scale(1, 1);
+	transform-origin: left top;
+}
+
+.menu-btn {
+	display: none;
+}
+
+.header_button {
+	height: 100%;
+	font-size: 1.4rem;
+	letter-spacing: 0.09em;
+	max-width: 21rem;
+}
+
+.header_button a {
+	background-color: #D09F51;
+	color: #fff;
+	padding: 0 4.2vw;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .3s ease-in-out;
+	border: 1px solid #D09F51;
+	box-sizing: border-box;
+}
+
+.header_button a:hover {
+	background-color: #fff;
+	border: 1px solid #D09F51;
+	color: #D09F51;
+}
+
+.language_container {
+	padding: 0 4.2vw;
+}
+
+.language {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	width: 7.5rem;
+	position: fixed;
+	bottom: 4rem;
+	font-size: 1.3rem;
+	letter-spacing: 0.07em;
+	color: #FFF;
+	mix-blend-mode: difference;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.language a {
+	display: inline-block;
+	color: #777;
+	transition: all .3s;
+	text-decoration: none;
+	height: 1.3em;
+}
+
+.language a:hover {
+	border-bottom: 1px solid #FFF;
+}
+
+
+/*ヒーローエリア---------------------------*/
+
+.heroarea {
+	width: 100vw;
+	height: 50rem;
+	position: relative;
+	display: flex;
+	align-items: center
+}
+
+.heroarea_bg{
+	position: fixed;
+	left: 0;
+	top:100;
+	width: 100%;
+	height: 50rem;
+	z-index: -1;
+	background-image: url(../../img/jp_hero_01.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+/*やや暗くするフィルタ*/
+.heroarea_bg::before{
+	content: ' ';
+	background-color: rgba(0,0,0,.2);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+.heroarea_text {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 5.6vw;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+	padding: 0 10vw;
+	position: relative;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px){
+	.heroarea_text {
+		font-size: 8rem;
+	}
+}
+
+
+/*セクションの共通設定---------------------------*/
+
+.section_title {
+	height: 6.4rem;
+	font-size: 2.8rem;
+	text-align: center;
+	letter-spacing: 0.24em;
+	margin-bottom: 9rem;
+}
+
+.section_title::after {
+	content: '';
+	display: block;
+	background: #D09F51;
+	height: 3px;
+	width: 6rem;
+	margin: 2.4rem auto 0;
+	transform: scale(0,1);
+	transition: transform .9s;
+}
+.section_title.on::after {
+	transform: scale(1,1);
+}
+
+
+/*コンセプト---------------------------*/
+
+#aboutus {
+	padding: 16rem 0 21rem;
+	background-color: #fff;
+}
+
+.concept_image {
+	width: calc(100% - 6rem);
+	max-width: 95rem;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 9.6rem;
+}
+
+.concept_text {
+	width: calc(100% - 6rem);
+	max-width: 100rem;
+	font-size: 2.1rem;
+	letter-spacing: 0.02em;
+	line-height: 2;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+/*ベネフィット---------------------------*/
+
+#service {
+	background-color: #1A1A1A;
+	color: #fff;
+	padding: 13.6rem 0 14.5rem;
+}
+
+.card {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8rem;
+	max-width: 160rem;
+	margin: 0 auto 8rem;
+}
+
+.card:last-child {
+	margin-bottom: 0;
+}
+
+.card:nth-child(odd) {
+	flex-flow: row-reverse;
+}
+
+.card_image {
+	width: 50%;
+	height: 48rem;
+	object-fit: cover;
+}
+
+.card_description {
+	width: 100%;
+	max-width: calc(36.5rem + 6rem);
+	height: auto;
+	margin: 0 auto;
+	padding: 3rem
+}
+
+.card_number {
+	font-size: 1.4rem;
+	font-weight: 700;
+	letter-spacing: 0.23em;
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.card_number_decoration {
+	font-weight: 700;
+	font-size: 2.3rem;
+	color: #D09F51;
+	margin-left: 1rem;
+	position: relative;
+	top: -1px;
+}
+
+.card_headder {
+	font-size: 2.4rem;
+	letter-spacing: 0.02em;
+	line-height: 1.3;
+	margin-bottom: 3.8rem;
+}
+
+.card_text {
+	color: #C7C7C7;
+	font-size: 1.5rem;
+	letter-spacing: 0.02em;
+	line-height: 1.6;
+}
+
+
+/*ワークス---------------------------*/
+
+#works {
+	background-color: #fff;
+	padding: 14rem 0;
+}
+
+.works_container {
+	width: calc(100% - 6rem);
+	max-width: 66rem;
+	text-align: center;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.works_read {
+	font-size: 2.4rem;
+	letter-spacing: 0.04em;
+	margin-bottom: 6rem;
+}
+
+/*コンタクト---------------------------*/
+
+#contact {
+	background-color: #D09F51;
+	color: #fff;
+	padding: 14rem 0;
+}
+
+.contact_container {
+	width: calc(100% - 6rem);
+	max-width: 66rem;
+	text-align: center;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+
+#contact .section_title::after {
+	background: #fff;
+}
+
+.contact_header {
+	font-size: 2.6rem;
+	letter-spacing: 0.02em;
+	line-height: 1.2;
+	margin-bottom: 4.5rem;
+}
+
+.contact_read {
+	font-size: 2.1rem;
+	letter-spacing: 0.04em;
+	margin-top: -2rem;
+	margin-bottom: 5.2rem;
+}
+
+.contact_text {
+	font-size: 1.7rem;
+	letter-spacing: 0.03em;
+	line-height: 1.52;
+	margin-bottom: 5.2rem;
+}
+
+.contact_button_container {
+	display: flex;
+	justify-content: center;
+}
+
+.contact_button {
+	color: #D09F51;
+	background-color: #fff;
+	font-size: 1.5rem;
+	letter-spacing: 0.09em;
+	width: 100%;
+	max-width: 22rem;
+	margin-right: 3rem;
+}
+
+.contact_button a {
+	color: inherit;
+	height: 6.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+.contact_button{
+	transition: all .3s ease-in-out;
+	border: 1px solid #FFF;
+	box-sizing: border-box;
+}
+.contact_button:hover {
+	color: #fff;
+	background-color: #D09F51;
+	border: 1px solid #FFF;
+}
+
+.contact_button:last-child {
+	margin-right: 0;
+}
+
+
+/*フッター---------------------------*/
+
+#footer {
+	background-color: #1A1A1A;
+	color: #C7C7C7;
+	font-size: 1.1rem;
+	letter-spacing: 0.046em;
+	padding: 4rem 0;
+	text-align: center;
+}
+
+.footer_primary {
+	font-size: 1.3rem;
+	margin-bottom: 0.8rem;
+}
+
+/*改行---------------------------*/
+.br-sp { display: none; }
+@media screen and (max-width: 768px){
+	.br-sp { display: block; }
+}
+.br-pc { display: block; }
+@media screen and (max-width: 768px){
+	.br-pc { display: none; }
+}
+
+
+/*----------------------------------------------------------------------------------*
+SPサイズ メディアクエリ
+*----------------------------------------------------------------------------------*/
+
+@media screen and (min-width:768px) {
+
+	.sp {
+		display: none;
+	}
+
+	.menu_sp {
+		display: none;
+	}
+	.menu_pc {
+		display: block;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+
+	.pc{
+		display: none;
+	}
+
+	.menu_sp {
+		display:  block;
+	}
+	.menu_pc {
+		display: none;
+	}
+
+	/*ヘッダー---------------------------*/
+
+	#headder {
+		height: 6.6rem;
+	}
+
+
+	/*----------------------------------------------------------*
+	▼ここからハンバーガーメニュー▼
+	*----------------------------------------------------------*/
+
+	/*メニュー開閉ボタン---------------------------*/
+
+	.menu-btn {
+		background-image: url(../../img/menu.svg);
+		position: relative;
+		right: 3rem;
+		z-index: 1;
+		width: 2.5rem;
+		height: 1.2rem;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		transition: all .4s linear;
+	}
+
+	.menu-btn.active {
+		z-index: 3;
+		background-image: url(../../img/close.svg);
+		position: relative;
+		right: 3.25rem;
+		width: 2rem;
+		height: 2rem;
+		transition: all .4s linear;
+	}
+
+
+	/*メニュー本体---------------------------*/
+
+	.menu_sp {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: #1A1A1A;
+	}
+
+
+	/*アニメーション部分---------------------------*/
+
+	.menu_sp {
+		transform: translateX(100vw);
+		transition: transform .3s;
+	}
+
+	.menu_sp.active {
+		transform: translateX(0);
+	}
+
+
+	/*ハンバーガーアイコン表示切り替え---------------------------*/
+
+	.menu-btn {
+		display: block;
+	}
+
+
+	/*ドロワーの中身---------------------------*/
+	.nav_item a::after {
+		margin-bottom: -6px;
+	}
+
+	.nav_container {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		margin-bottom: 2rem;
+	}
+
+	.nav {
+		height: auto;
+		width: auto;
+		max-width: none;
+		font-size: 2.1rem;
+		position: relative;
+		left: 0;
+		transform: translate(0%, 0);
+	}
+
+	.nav_item {
+		width: unset;
+		margin-bottom: 5.4rem;
+	}
+
+	.nav_item a {
+		color: #fff;
+		height: inherit;
+		display: flex;
+		align-items: center;
+		justify-content: center
+	}
+
+	.nav_item::after {
+		content: '';
+		display: block;
+		background: #D09F51;
+		height: 3px;
+		width: 100%;
+		margin: 1.6rem auto 0;
+		position: absolute;
+		bottom: -.7rem;
+		transform: scale(0, 1);
+		transform-origin: right top;
+		transition: transform .3s;
+	}
+
+	.nav_item:hover::after {
+		transform-origin: left top;
+		transform: scale(1, 1);
+	}
+
+	.header_button {
+		height: auto;
+	}
+
+	.header_button a {
+		font-size: 1.5rem;
+		padding: 2.2rem 7rem;
+	}
+
+	/*----------------------------------------------------------*
+	▼ここまでハンバーガーメニュー▼
+	*----------------------------------------------------------*/
+
+
+	/*言語リンク---------------------------*/
+
+	.language {
+		position: absolute;
+		bottom: auto;
+		left: auto;
+		right: 8.5rem;
+	}
+
+
+	/*ヒーローエリア---------------------------*/
+
+	.heroarea {
+		height: 44rem;
+	}
+
+	.heroarea_text {
+		font-size: 4.5rem;
+		padding: 3rem;
+		position: relative;
+	}
+
+
+	/*セクションの共通部分SP---------------------------*/
+
+	.section_title {
+		height: 4.4rem;
+		font-size: 1.9rem;
+		margin-bottom: 5.3rem;
+	}
+
+	.section_title::after {
+		width: 4rem;
+		margin: 1.6rem auto 0;
+	}
+
+
+	/*コンセプトSP---------------------------*/
+
+	#aboutus {
+		padding: 8.6rem 0;
+	}
+
+	.concept_image {
+		margin-bottom: 4.3rem;
+	}
+
+	.concept_text {
+		text-align: left;
+		font-size: 1.7rem;
+	}
+
+
+	/*ベネフィットSP---------------------------*/
+
+	#service {
+		padding: 8.6rem 0;
+	}
+
+	#benefits .section_title {
+		margin-bottom: 5.3rem;
+	}
+
+	.card {
+		flex-direction: column;
+		padding: 0 3rem;
+		margin-bottom: 5rem;
+	}
+
+	.card:nth-child(odd) {
+		flex-flow: column;
+	}
+
+	.card_image {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		margin-bottom: 2.8rem;
+	}
+
+	.card_description {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+
+	.card_number {
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+	}
+
+	.card_number_decoration {
+		font-size: 2rem;
+		color: #D09F51;
+		margin-left: .8rem;
+		position: relative;
+		top: -1px;
+	}
+
+	.card_headder {
+		font-size: 1.9rem;
+		margin-bottom: 2rem;
+	}
+
+	.card_text {
+		font-size: 1.3rem;
+	}
+
+	/*ワークス---------------------------*/
+	#works {
+		padding: 8.6rem 0;
+	}
+
+	.works_read {
+		font-size: 2.2rem;
+		margin-bottom: 4rem;
+	}
+
+	/*コンタクトSP---------------------------*/
+
+	#contact {
+		padding: 8.6rem 0;
+	}
+
+	.contact_container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact_header {
+		font-size: 1.7rem;
+		margin-bottom: 1.2rem;
+	}
+
+	.contact_read {
+		font-size: 2rem;
+		margin-top: unset;
+		margin-bottom: 4.8rem;
+	}
+
+	.contact_text {
+		font-size: 1.4rem;
+		margin-bottom: 4.8rem;
+	}
+
+	.contact_button_container {
+		flex-direction: column;
+	}
+
+	.contact_button {
+		font-size: 1.4rem;
+		width: 18rem;
+		margin-right: auto;
+		margin-bottom: 2rem;
+	}
+
+	.contact_button:last-child {
+		margin-bottom: 0;
+	}
+
+	.contact_button a {
+		height: 5rem;
+	}
+
+
+	/*フッターSP---------------------------*/
+
+	#footer {
+		font-size: 1.1rem;
+		padding: 3.2rem 0;
+	}
+
+	.footer_primary {
+		font-size: 1.2rem;
+		margin-bottom: 0.6rem;
+	}
+
+}
