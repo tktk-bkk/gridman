@@ -851,6 +851,8 @@ SPサイズ メディアクエリ
 }
 
 
+
+
 /*IE11用object-fit-images---------------------------*/
 
 .card_image{
@@ -864,3 +866,12 @@ SPサイズ メディアクエリ
 		font-family: 'object-fit: cover;'
 	}
 	}
+
+/*IE11用object-fit-images---------------------------*/
+
+@media all and (-ms-high-contrast: none) {
+	/* ここに書く */
+	.language {
+		color: inherit;
+	}
+}
