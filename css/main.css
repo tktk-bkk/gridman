@@ -880,8 +880,8 @@ IE対応*
 
 /*ブレンドモードの代替---------------------------*/
 
+/* for IE 11 */
 @media all and (-ms-high-contrast: none) {
-
 	.language {
 		color: inherit;
 		font-weight: bold;
@@ -890,9 +890,22 @@ IE対応*
 		color: #777;
 		font-weight: normal;
 	}
-
 	.language a:hover {
 		border-bottom: 1px solid #777;
 	}
+}
 
+/* for Microsoft Edge */
+@supports (-ms-ime-align:auto)  {
+	.language {
+		color: inherit;
+		font-weight: bold;
+	}
+	.language a {
+		color: #777;
+		font-weight: normal;
+	}
+	.language a:hover {
+		border-bottom: 1px solid #777;
+	}
 }
