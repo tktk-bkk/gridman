@@ -19,6 +19,14 @@ html {
 PCサイズ
 *----------------------------------------------------------------------------------*/
 
+/*topアンカーリンク位置調整---------------------------*/
+
+#main {
+	margin-top: -10rem;
+	padding-top:10rem;
+}
+
+
 /*ヘッダー---------------------------*/
 
 #headder {
@@ -90,7 +98,7 @@ PCサイズ
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center
+	justify-content: center;
 }
 
 .nav_item::after {
