@@ -151,6 +151,9 @@ PCサイズ
 	transition: all .3s ease-in-out;
 	border: 1px solid #D09F51;
 	box-sizing: border-box;
+	position: relative;
+	right: 0;
+
 }
 
 .header_button a:hover {
